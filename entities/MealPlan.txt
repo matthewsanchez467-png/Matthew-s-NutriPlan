@@ -1,0 +1,86 @@
+{
+  "name": "MealPlan",
+  "type": "object",
+  "properties": {
+    "day": {
+      "type": "string",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ]
+    },
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "Breakfast",
+        "Snack 1",
+        "Lunch",
+        "Snack 2",
+        "Dinner"
+      ]
+    },
+    "meal_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "calories": {
+      "type": "number"
+    },
+    "protein_g": {
+      "type": "number"
+    },
+    "carbs_g": {
+      "type": "number"
+    },
+    "fat_g": {
+      "type": "number"
+    },
+    "fiber_g": {
+      "type": "number"
+    },
+    "micronutrients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_recipe": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "day",
+    "meal_type",
+    "meal_name",
+    "calories",
+    "protein_g",
+    "carbs_g",
+    "fat_g",
+    "fiber_g"
+  ]
+}
